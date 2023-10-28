@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Your blog description goes here.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    /* CSS for mobile view (less than 500px) */
+    @media (max-width: 500px) {
+
+      nav,
+      .search-bar,
+      .sidebar {
+        display: none;
+      }
+
+      header h1 {
+        width: 100%;
+      }
+
+      footer ul {
+        display: none;
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .footer-text {
+        margin: 10px auto;
+      }
+
+      .article-container {
+        flex-direction: column;
+        /* Display articles in a column layout */
+        padding-bottom: 0;
+      }
+
+      .article-container img {
+        max-width: 100%;
+        /* Adjust image width */
+        float: none;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        /* Rounded corners */
+      }
+
+      .article-container div {
+        float: none;
+        /* Remove float */
+        width: 100%;
+      }
+
+      .article-container div button {
+        display: none;
+        /* Hide the button */
+      }
+    }
+
+    
+
+    /* CSS for desktop view */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    header h1 {
+      float: left;
+    }
+
+    .search-bar {
+      float: right;
+      padding: 10px;
+      width: 25%;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background-color: lightgray;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: rgb(227, 140, 17);
+      padding: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: rgb(227, 140, 17);
+      border: 2px solid rgb(227, 140, 17);
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+
+    button {
+      transition-duration: 0.4s;
+    }
+
+    button a {
+      text-decoration: none;
+      /* Remove underline */
+    }
+
+    button a:visited {
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    .content {
+      width: 65%;
+      padding: 20px;
+      background-color: white;
+      /* Changed background color to white */
+    }
+
+    .article-container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      /* Increased margin between articles */
+      border-bottom: 1px solid #ccc;
+      /* Added border between articles */
+      padding-bottom: 20px;
+      /* Added padding between articles and border */
+    }
+
+    .article-container img {
+      max-width: 150px;
+      /* Adjust the image width */
+      height: auto;
+      float: left;
+      margin-right: 10px;
+      border-radius: 10px;
+      /* Rounded corners */
+    }
+
+    .article-container div {
+      float: left;
+    }
+
+    .article-container h2 {
+      margin-top: 0;
+    }
+
+    .article-container p {
+      font-size: 0.9em;
+    }
+
+    .article-container button {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .sidebar {
+      width: 30%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      /* Rounded corners */
+    }
+
+    .sidebar h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .sidebar img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p {
+      font-size: 0.9em;
+    }
+
+    footer {
+      padding-top: 20px;
+      /* Added padding */
+      background-color: gray;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Center vertically */
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: darkgray;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    footer ul li {
+      list-style: none;
+      display: inline;
+    }
+
+    footer a {
+      color: white;
+      padding: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      float: right;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Preston Hatch</h1>
+    <input type="text" class="search-bar" placeholder="Search...">
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Recent Posts</a>
+    <a href="#">Old Posts</a>
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <div class="container">
+    <main class="content">
+      <div class="article-container">
+        <img src="images/tree.jpg" alt="tree">
+        <div>
+          <h2>First Post with Image</h2>
+          <p>By Adam Smith, Oct 7, 2023</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra libero et dapibus ultrices. Nostrum
+            est vel ipsam deserunt facere iusto possimus, quibusdam ipsa qui fuga sint, doloremque repudiandae sunt, aut
+            consectetur aperiam culpa at pariatur?</p>
+          <button>Read more</button>
+        </div>
+      </div>
+
+      <div class="article-container">
+        <img src="images/field.jpg" alt="field">
+        <div>
+          <h2>Second Post with Image</h2>
+          <p>By John Doe, Oct 7, 2023</p>
+          <p>Curabitur sit amet lacus id leo facilisis finibus in a urna. Nullam posuere arcu eget sem feugiat, vel
+            varius ligula scelerisque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cumque
+            maxime, quo nesciunt pariatur tenetur ipsam tempora deleniti voluptates ea dicta corporis voluptatibus
+            laudantium! Voluptates dolore quis aut beatae sint?</p>
+          <button>Read more</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Secondary Content</h2>
+      <img src="images/field.jpg" alt="field">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae sapiente ratione officiis iusto distinctio
+        obcaecati, quibusdam totam fuga eligendi quo omnis provident mollitia amet ipsam ullam eius assumenda illum
+        doloribus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsa impedit ab ex maiores animi,
+        fugit assumenda porro eaque neque. Fugiat sint ullam numquam libero quae repudiandae! Libero, aliquam autem!</p>
+    </aside>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Youtube</a></li>
+    </ul>
+    <div class="footer-text">
+      &copy; All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+
+</html>

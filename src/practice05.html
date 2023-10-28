@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice05</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        main {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        body {
+            padding: 0 40px;
+            margin: 0 auto;
+            /* Add some padding for better readability */
+            background-color: white;
+            max-width: 800px;
+            /* Limit the maximum width of the content */
+        }
+
+        img {
+            width: 40%;
+            padding: 5px;
+            float: left;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        header {
+            padding: 10px;
+            background-color: white;
+        }
+
+        .menu-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(123, 135, 154);
+            padding-bottom: 5px;
+        }
+
+        .heads>span {
+            padding: 8px;
+        }
+
+        .heads,
+        .heads-right {
+            display: inline-block;
+        }
+
+        .heads-right>span {
+            padding: 8px;
+        }
+
+        .heads {
+            float: left;
+        }
+
+        .heads-right {
+            float: right;
+        }
+
+        /* Set text color for clicked links */
+        a:visited {
+            color: rgb(123, 135, 154);
+        }
+
+        /* Remove underline and set text color for unclicked links */
+        a {
+            text-decoration: none;
+            /* Remove underline */
+            color: rgb(123, 135, 154);
+        }
+
+        /* Add floating underline on hover */
+        a:hover {
+            border-bottom: 2px solid rgb(123, 135, 154);
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .aych2 {
+            text-align: center;
+            margin-right: 100px;
+            max-width: 80%;
+        }
+
+        .circle {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            margin: .5rem;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .vcenter1 .circle {
+            line-height: 150px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .col {
+            padding: 10px;
+        }
+
+        .eqh-table-cells {
+            display: table;
+        }
+
+        .eqh-table-cells .col {
+            display: table-cell;
+        }
+
+        footer {
+            padding-top: 20px;
+        }
+
+        .footL {
+            float: left;
+        }
+
+        .footR {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="heads">
+                <span><b>Floated Menus:</b></span>
+                <span><a href="https://example.com"> One</a></span>
+                <span><a href="https://example.com"> Two</a></span>
+            </div>
+            <div class="heads-right">
+                <span><a href="https://example.com">Three</a></span>
+                <span><a href="https://example.com">Four</a></span>
+            </div>
+        </div>
+    </header>
+    <br>
+    <main>
+
+
+
+        <article>
+            <h2>Article 1: Wrapping text around an image</h2>
+            <section>
+                <h2 class="aych2">A secondary heading</h2>
+                <p class="with-img">
+                    <img src="https://images.unsplash.com/photo-1621603933126-6c216db10045?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                        alt="SLC">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod error quasi suscipit! Debitis,
+                    accusantium
+                    exercitationem. Mollitia, natus saepe blanditiis accusantium iste doloremque expedita, neque qui,
+                    amet sequi
+                    deleniti molestias possimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                    quas
+                    necessitatibus repellat dignissimos illum officia ab. Magni esse sint, quidem rerum quos, ipsum ut
+                    nostrum
+                    quae voluptatibus quia accusamus cumque? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Excepturi
+                    sequi cumque sapiente. Consectetur ipsa inventore adipisci cupiditate nostrum culpa repudiandae
+                    similique
+                    molestiae, a consequuntur sequi accusantium quas corrupti iste aperiam? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Autem officia dolor dolorem voluptate facere magni sapiente rem ab
+                    debitis.
+                    Cupiditate, vero. Reprehenderit, illum et? Voluptatem soluta laborum nam asperiores provident.
+                </p>
+                </p>
+            </section>
+        </article>
+        <article>
+            <h2>Article 2: Centering text vertically</h2>
+            <section>
+                <div class="clearfix vcenter1">
+                    <div class="circle">Selectors</div>
+                    <div class="circle">Inheritance</div>
+                    <div class="circle">Cascade</div>
+                    <div class="circle">Specificity</div>
+                </div>
+            </section>
+        </article>
+        <article>
+            <h2>Article 3: Equal height columns</h2>
+            <section class="eqh-table-cells clearfix">
+                <div class="col" style="width: 20%; background-color: #eee;">Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Ipsum fuga, quibusdam inventore delectus architecto cum. Modi fugit aut ratione
+                    deleniti nihil rerum praesentium odit.</div>
+                <div class="col" style="width: 60%; background-color: #000; color: #fff">Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Dolorem necessitatibus itaque aliquid, ad eius et eos voluptatibus,
+                    eaque est veniam rem voluptas iusto excepturi laborum? Ab voluptatum explicabo repudiandae qui.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus impedit fugit dignissimos at magnam
+                    consequatur, expedita laborum corporis, explicabo hic inventore magni tenetur, aperiam sunt quidem
+                    deleniti nulla velit officia?</div>
+                <div class="col" style="width: 20%; background-color: #eee;">Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Et similique sequi mollitia dolores omnis consequatur nostrum laborum eos
+                    cupiditate. Dolor nam maxime architecto facere unde, quas temporibus sunt harum laboriosam!</div>
+            </section>
+        </article>
+
+        <footer>
+            <hr>
+            <p class="footL"><b>Preston Hatch</b></p>
+            <p class="footR">&copy All Rights Reserved</p>
+        </footer>
+    </main>
+</body>
+
+</html>

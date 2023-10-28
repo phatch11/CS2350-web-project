@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utah: Mighty 5</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        nav {
+            background-color: #eee;
+        }
+
+        /* Remove underline and set text color for unclicked links */
+        nav a {
+            text-decoration: none;
+            /* Remove underline */
+            color: rgb(227, 140, 17);
+        }
+
+        /* Set text color for clicked links */
+        nav a:visited {
+            color: rgb(227, 140, 17);
+        }
+
+        /* Add floating underline on hover */
+        nav a:hover {
+            border-bottom: 2px solid rgb(227, 140, 17);
+        }
+
+        nav>ul {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        nav>ul>li {
+            display: inline;
+            margin-right: 16px;
+        }
+
+        .pull-left {
+            float: left;
+        }
+
+        .pull-right {
+            float: right;
+        }
+
+        iframe {
+            float: right;
+        }
+
+        /*.yt-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }*/
+
+        /*.yt-embed iframe {
+            position: absolute;
+            border: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }*/
+
+        /*.aside-video {
+            width: 40%;
+            padding: 1rem;
+        }*/
+
+        main {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(227, 140, 17);
+            border: 2px solid rgb(227, 140, 17);
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button {
+            transition-duration: 0.4s;
+        }
+
+        button a {
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        button a:visited {
+            color: black;
+        }
+
+        .flex-parent {
+            display: flex;
+            padding-top: 1rem;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        body {
+            /*padding: 0 40px;*/
+            margin: 0;
+            /* Add some padding for better readability */
+            background-color: white;
+            /*max-width: 800px;*/
+            /* Limit the maximum width of the content */
+        }
+
+        img {
+            width: 40%;
+            padding: 5px;
+            float: left;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        hr {
+            border-top: 4px #eee;
+            padding-top: 20px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .cards1 {
+            display: table;
+        }
+
+        .cards1 .card {
+            display: table-cell;
+            width: 30%;
+            border: 1px solid #eee;
+            padding: .5rem;
+            border-radius: .8rem;
+            justify-content: space-around;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .content {
+            padding: 80px;
+        }
+
+        .bottomnav {
+            background-color: #5b5858f6;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Remove underline and set text color for unclicked links */
+        .bottomnav a {
+            text-decoration: none;
+            /* Remove underline */
+            color: rgb(227, 140, 17);
+        }
+
+        /* Set text color for clicked links */
+        .bottomnav a:visited {
+            color: rgb(227, 140, 17);
+        }
+
+        /* Add floating underline on hover */
+        .bottomnav a:hover {
+            border-bottom: 2px solid rgb(227, 140, 17);
+        }
+
+        .bottomnav>ul {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .bottomnav>ul>li {
+            display: list-item
+        }
+
+        .bottomnav:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .bottomnav h3 {
+            color: white;
+        }
+
+        .ul-1,
+        .ul-2,
+        .ul-3,
+        .ul-4 {
+            width: 25%;
+            float: left;
+            padding-bottom: 8px;
+        }
+
+        .ul-1>li {
+            margin-bottom: 1rem;
+        }
+
+        .ul-2>li {
+            margin-bottom: 1rem;
+        }
+
+        .ul-3>li {
+            margin-bottom: 1rem;
+        }
+
+        .ul-4>li {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            padding-top: .5rem;
+        }
+
+        .footL {
+            float: left;
+            padding-left: 16rem;
+        }
+
+        .footR {
+            float: right;
+            padding-right: 16rem;
+            
+        }
+
+        /* Remove underline and set text color for unclicked links */
+        .ul-foots a {
+            text-decoration: none;
+            /* Remove underline */
+            color: rgb(227, 140, 17);
+        }
+
+        /* Set text color for clicked links */
+        .ul-foots a:visited {
+            color: rgb(227, 140, 17);
+        }
+
+        /* Add floating underline on hover */
+        .ul-foots a:hover {
+            border-bottom: 2px solid rgb(227, 140, 17);
+        }
+
+        .ul-foots {
+            list-style: none;
+            /*padding: 0 20px;*/
+            padding-left: 16rem;
+        }
+
+        .ul-foots-right {
+            float: right;
+            padding-right: 16rem;
+            display: inline;
+            list-style: none;
+           
+        }
+
+        .ul-foots>li {
+            display: inline;
+            margin-left: 1rem;
+        }
+
+        footer>ul>li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        footer>ul {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="clearfix">
+        <ul class="pull-left">
+            <li>Utah Mighty <strong>FIVE</strong></li>
+            <li><a href="https://example.com/">One</a></li>
+            <li><a href="https://example.com/">Two</a></li>
+            <li><a href="https://example.com/">Three</a></li>
+            <li><a href="https://example.com/">Four</a></li>
+            <li><a href="https://example.com/">Five</a></li>
+        </ul>
+        <ul class="pull-right">
+            <li><a href="https://example.com/">Account</a></li>
+            <li><a href="https://example.com/">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="jumbotron">
+            <div class="pull-right aside-video">
+                <div class="yt-embed">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iKJ-TuDl8h0?si=flF5aQsynOPm0TOp"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <h1>Close Your Eyes and Open Your Mind</h1>
+                <p>Aperiam quia qui iste hic neque omnis cum asperiores? At ipsum molestias temporibus et eos facere sed
+                    tempore ratione. Nobis, nam obcaecati! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quos
+                    eos repellat non magnam quaerat harum quae deserunt error nobis nulla eius quam temporibus
+                    voluptates,
+                    voluptas aspernatur ducimus fuga labore in.</p>
+                <a href="https://example.com/"><button>Take a tour</button></a>
+                <a href="https://example.com/"><button>Start a free trial</button></a>
+            </div>
+            <hr>
+        </div>
+
+        <h2>What are they?</h2>
+        <section class="cards1">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514820654155-15e52b32874e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                    alt="Bryce Canyon">
+                <h3>Bryce Canyon National Park</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo amet labore beatae assumenda a. Esse
+                    hic
+                    veritatis, earum autem quos minima et voluptate quaerat exercitationem? Sed voluptatum vel non ab!
+                    Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Explicabo distinctio voluptatum nemo magnam
+                    repellendus a ipsam voluptatem eum ad quasi accusamus reiciendis provident optio aut nesciunt
+                    minima, ab
+                    ea!</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558836809-c94f6e3dfbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                    alt="Zion">
+                <h3>Zion National Park</h3>
+                <p>Illo amet labore beatae assumenda a. Esse hic veritatis, earum autem quos minima et voluptate quaerat
+                    exercitationem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ex, molestiae
+                    illum
+                    odit obcaecati perspiciatis architecto excepturi quis, necessitatibus blanditiis hic at temporibus
+                    rerum. Veritatis, necessitatibus tempora. Sapiente, mollitia minus. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Dicta quis omnis consectetur architecto, quae ab praesentium, qui
+                    reprehenderit sequi in labore maiores quas culpa voluptatibus quos, dolorem molestias illum eos!</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1615046727544-8fd9ac9836cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                    alt="Arches">
+                <h3>Arches National Park</h3>
+                <p>Esse hic veritatis, earum autem quos minima et voluptate quaerat exercitationem. Lorem ipsum dolor
+                    sit,
+                    amet consectetur adipisicing elit. Magnam ipsam impedit nostrum itaque, ut recusandae corporis at
+                    nesciunt minima harum quis nobis, ipsum ratione. Sequi debitis voluptatum mollitia sapiente
+                    deleniti.
+                </p>
+            </div>
+
+        </section>
+        <div class="flex-parent jc-center">
+            <a href="https://example.com/"><button>Remaining two</button></a>
+        </div>
+    </div>
+
+    <section class="bottomnav clearfix">
+        <ul class="ul-1">
+            <h3>Offices</h3>
+            <li><a href="https://example.com/">One</a></li>
+            <li><a href="https://example.com/">Two</a></li>
+            <li><a href="https://example.com/">Three</a></li>
+            <li><a href="https://example.com/">Four</a></li>
+        </ul>
+        <ul class="ul-2">
+            <h3>Links</h3>
+            <li><a href="https://example.com/">One</a></li>
+            <li><a href="https://example.com/">Two</a></li>
+            <li><a href="https://example.com/">Three</a></li>
+            <li><a href="https://example.com/">Four</a></li>
+        </ul>
+        <ul class="ul-3">
+            <h3>Contact</h3>
+            <li><a href="https://example.com/">Twitter</a></li>
+            <li><a href="https://example.com/">Facebook</a></li>
+            <li><a href="https://example.com/">Instagram</a></li>
+            <li><a href="https://example.com/">Pinterest</a></li>
+        </ul>
+        <ul class="ul-4">
+            <h3>Locations</h3>
+            <li><a href="https://example.com/">One</a></li>
+            <li><a href="https://example.com/">Two</a></li>
+            <li><a href="https://example.com/">Three</a></li>
+            <li><a href="https://example.com/">Four</a></li>
+        </ul>
+    </section>
+
+    <footer class="clearfix">
+        <ul class="ul-foots">
+            <li><a href="https://example.com/">Legal</a></li>
+            <li><a href="https://example.com/">Partner</a></li>
+            <li><a href="https://example.com/">Explore</a></li>
+        </ul>
+        <ul class="footR">
+            <li><b>&copy All Rights Reserved</b></li>
+        </ul>
+    </footer>
+
+</html>

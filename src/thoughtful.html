@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+
+<!--
+Preston Hatch
+CS 2350
+Recreating a Sample Page
+Thoughtful Page
+-->
+
+
+
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto; /* Center the entire page with equal left and right margins */
+      padding: 20px; /* Add some padding for better readability */
+      background-color: #f0f0f0;
+      max-width: 800px; /* Limit the maximum width of the content */
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    nav {
+      border-bottom: 3px solid #ddd; /* Add a border below the menu */
+      border-top: 3px solid #ddd; /* Add a border above the menu */
+      padding: 10px 20px;
+    }
+
+    nav ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav li:first-child {
+      margin-left: 0;
+    }
+
+    nav li:last-child {
+      margin-right: 0;
+    }
+
+    nav a {
+      color: #333; /* text color */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Margin styles */
+    .margin-right {
+      margin-right: 25%;
+    }
+
+    .margin-left {
+      margin-left: 25%;
+    }
+
+    /* Light gray text styles for person's name and email */
+    .section-info {
+      color: #888;
+      font-size: 14px;
+    }
+
+    blockquote {
+      margin-right: 25%;
+    }
+
+    pre {
+      margin-right: 25%;
+    }
+
+    /* Vertical gray line for sections */
+    section {
+      border-left: 3px solid #ddd;
+      border-right: 3px solid #ddd;
+      padding-left: 20px; /* Add some padding for better spacing */
+      margin-bottom: 20px; /* Add some margin at the bottom of each section */
+    }
+
+     /* Add space between list items */
+     ul li,
+    ol li {
+      margin-bottom: 5px;
+    }
+
+     /* Solid line at the bottom of the page */
+     hr {
+      border: 0;
+      border-top: 3px solid #ddd;
+    }
+
+     /* Footer styles */
+     footer {
+      font-size: 12px;
+      margin-top: 20px; 
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Centered container -->
+  <div class="container">
+    <h2>Be Thoughtful</h2>
+    <!-- Menu -->
+    <nav>
+      <ol>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Body content -->
+  <div class="content">
+    <!-- First section -->
+    <h1 style="text-align: center;">Believe in the Power of Your Own Thoughts</h1>
+
+    <section>
+      <h3 class="margin-right">USING A SINGLE PARAGRAPH</h3>
+      <div class="section-info margin-right">By John Doe (<a href="mailto:john@example.com">john@example.com</a>) on 23 February 2099 </div>
+      <p class="margin-right">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla ut morbi tincidunt augue interdum. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. 
+      </p>
+    </section>
+
+    <section>
+        <h3 class="margin-left">NESTING LISTS OF DIFFERENT KINDS</h3>
+        <div class="section-info margin-left">By Jane Smith (<a href="mailto:jane@example.com">jane@example.com</a>) on 24 February 2099</a></div>
+        <p class="margin-left">
+          Start with an unordered list:
+        </p>
+      
+        <!-- Unordered list -->
+        <ul class="margin-left">
+          <li>Here is the first list item by itself</li>
+          <li>
+            Here is a list item with a nested ordered list:
+            <!-- Nested ordered list -->
+            <ol>
+              <li>Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</li>
+              <li>Odio pellentesque diam volutpat commodo sed egestas.</li>
+            </ol>
+          </li>
+          <li>Another list item by itself</li>
+          <li>An item list with a nested description list:</li>
+        </ul>
+      
+        <!-- Nested description list -->
+        <ul class="margin-left">
+            <!-- Nested description list -->
+            <dl>
+              <dt>Dreams</dt>
+              <dd>massa placerat duis ultricies lacus sed</dd>
+              <dt>Ideas</dt>
+              <dd>bibendum arcu vitae elementum curabitur vitae nunc</dd>
+              <dt>Thoughts</dt>
+              <dd>vulputate eu scelerisque felis imperdiet proin fermentum leo vel</dd>
+            </dl>
+          </li>
+        </ul>
+      </section>
+
+    <section>
+      <h3 class="margin-right">WITH BLOCKQUOTES AND CODE BLOCKS</h3>
+      <div class="section-info margin-right">By Adam Johnson (<a href="mailto:adam@example.com">adam@example.com</a>) on 25 February 2099</div>
+      <p>Velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt.</p>
+      <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida nisl at finibus iaculis. Interdum velit laoreet id donec ultrices tincidunt arcu non.
+      </blockquote>
+      <p>Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras.</p>
+    
+      <pre>
+        let x, y, z; // Declare 3 variables
+        x = 5;       // assign the value 5 to x
+        y = 6;       // assign the value of 6 to y
+        z = x + y;   // assign the sum of x and y to z
+
+        document.getElementById("dd").innerHTML = "z = " + z;
+      </pre>
+    </section>
+  </div>
+
+  
+  <footer>
+    <hr>
+    <p>&copy; PH Productions - 2023</p>
+  </footer>
+
+</body>
+</html>

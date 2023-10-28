@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      align-items: center;
+      background-color: lightsteelblue;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: steelblue;
+      text-decoration: none; 
+      position: relative;
+    }
+
+    a:hover {
+      border-bottom: 2px solid steelblue;
+
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      flex: 1;
+    }
+
+    .left-column,
+    .right-column {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff;
+      width: 40%;
+    }
+
+    .left-column {
+      margin-right: 20px;
+    }
+
+    .right-column {
+      margin-left: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+    }
+
+    .form-group .radio-group label {
+      margin-right: 20px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .form-group .radio-group input {
+      display: none;
+    }
+
+    .form-group .radio-group label {
+      border-radius: 50%;
+      border: 1px solid #333;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: 10px;
+      /* Added margin to create space */
+    }
+
+    .form-group .radio-group label:hover {
+      background-color: #f0f0f0;
+    }
+
+    .form-group .radio-group input:checked+label {
+      background-color: #333;
+      color: white;
+    }
+
+    .form-group .checkbox label {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group .checkbox input {
+      margin-right: 10px;
+      /* Adjust margin as needed */
+    }
+
+    .form-group button {
+      padding: 15px 30px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+      border-radius: 10px;
+    }
+
+    .form-group button:hover {
+      background-color: steelblue;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .left-column h2 {
+      margin-bottom: 10px;
+    }
+
+    .left-column ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .left-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .left-column ul li a {
+      text-decoration: none;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><b>Preston Hatch</b></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+    
+    <nav>
+      <ul>
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Sign up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="left-column">
+      <h2>Main Menu</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+      <h2>Featured Projects</h2>
+      <ul>
+        <li><a href="#">Project A</a></li>
+        <li><a href="#">Project B</a></li>
+        <li><a href="#">Project C</a></li>
+        <li><a href="#">Project X</a></li>
+        <li><a href="#">Project Y</a></li>
+        <li><a href="#">Project Z</a></li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <h2>Contact Form</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+        
+      </div>
+      <div class="form-group">
+        <label for="member">Are you a member?</label>
+        <div class="radio-group">
+          <input type="radio" id="yes" name="member" value="yes">
+          <label for="yes">
+            <div class="radio-circle"></div>Yes
+          </label>
+          <input type="radio" id="no" name="member" value="no">
+          <label for="no">
+            <div class="radio-circle"></div>No
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="comment">Comment Box:</label>
+        <textarea id="comment" placeholder="Leave us a comment!"></textarea>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <input type="checkbox" id="terms" name="terms" value="accepted">
+          <label for="terms">I have read the terms and conditions</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 - CS2350 - All rights reserved
+  </footer>
+
+</body>
+
+</html>
